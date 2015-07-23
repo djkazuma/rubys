@@ -24,4 +24,10 @@ class String
       result.nil? ? text : result
     end
   end
+
+  def to_image_url
+    text = self.gsub(/url\(\/img\//, "image-url('")
+    text = text.gsub(/\.png\)/, ".png')")
+    text
+  end
 end
