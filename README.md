@@ -24,10 +24,12 @@ vim test.erb
 :rubydo $_ = $_.to_image_tag('/img/', '')
 ```
 Before
-
+```
 <img src="/img/test.png" width="10" height="14" class="test" alt="" />
-
+```
 
 After
+```
 <%= image_tag "test.png", width: "10", height: "14", class: "test", alt: "" %>
+```
 
